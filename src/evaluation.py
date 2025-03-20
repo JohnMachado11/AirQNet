@@ -23,8 +23,8 @@ def compute_accuracy(model, dataloader):
     """
 
     model = model.eval()
-    correct = 0.0
-    total_examples = 0
+    correct: float = 0.0
+    total_examples: int = 0
 
     for idx, (features, labels) in enumerate(dataloader):
 
@@ -46,7 +46,7 @@ def predict_class(model):
     Predict the class on a single sample.
     """
 
-    input_data = [[27.1, 76.3, 3.9, 18.0, 28.7, 9.9, 2.07, 5.6, 558.0]] # expected label is 2
+    input_data: list[list[float]] = [[27.1, 76.3, 3.9, 18.0, 28.7, 9.9, 2.07, 5.6, 558.0]] # expected label is 2
 
     model.eval()  # Set the model to evaluation mode
 
