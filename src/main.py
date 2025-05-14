@@ -136,7 +136,7 @@ for epoch in range(NUM_EPOCHS):
     if avg_val_loss < best_val_loss:
         # Found new best validation loss
         best_val_loss = avg_val_loss
-        patience_counter: int = 0
+        patience_counter = 0
         best_model_weights = copy.deepcopy(model.state_dict())
     else:
         # No improvement
